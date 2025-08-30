@@ -2,9 +2,21 @@
   "name": "gulp-inline-style",
   "version": "0.0.1",
   "description": "Gulp plugin to inline links to stylesheets.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./src/index.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
   "scripts": {
-    "test": "npm test"
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -25,7 +37,9 @@
   "homepage": "https://github.com/enjikaka/gulp-inline-style#readme",
   "devDependencies": {
     "@types/node": "^24.3.0",
-    "@types/vinyl": "^2.0.12"
+    "@types/vinyl": "^2.0.12",
+    "vitest": "^3.2.4",
+    "vinyl": "^3.0.0"
   },
   "dependencies": {
     "plugin-error": "^2.0.1"

@@ -6,7 +6,9 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "moduleResolution": "node",
-    "types": ["node"]
+    "types": ["node"],
+    "declaration": true,
+    "outDir": "./dist"
   },
-  "include": ["index.ts"]
+  "include": ["src/index.ts"]
 }

@@ -14,7 +14,7 @@ const PLUGIN_NAME = "gulp-inline-style";
  * @param options - Array of CSS link IDs to inline
  * @returns {Transform} Transform stream
  */
-function inlineStyle(options = []): Transform {
+function inlineStyle(options: string[] = []): Transform {
   if (!Array.isArray(options)) {
     throw new PluginError(PLUGIN_NAME, "Options must be an array of strings");
   }
