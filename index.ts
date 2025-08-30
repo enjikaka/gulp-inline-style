@@ -9,7 +9,16 @@ import type Vinyl from "vinyl";
 
 const PLUGIN_NAME = "gulp-inline-style";
 
-function inlineStyle(options = []) {
+/**
+ * Gulp plugin to inline CSS files referenced by link tags with specific IDs
+ * @param options - Array of CSS link IDs to inline
+ * @returns {Transform} Transform stream
+ */
+function inlineStyle(options = []): Transform {
+  if (!Array.isArray(options)) {
+    throw new PluginError(PLUGIN_NAME, "Options must be an array of strings");
+  }
+  
   return new Transform({
     objectMode: true,
     async transform(file: Vinyl, enc: BufferEncoding, cb: (error: Error | null, file: Vinyl) => void) {
