@@ -1,5 +1,5 @@
 {
-  "name": "gulp-inline-style",
+  "name": "gulp-inline-styles",
   "version": "0.0.1",
   "description": "Gulp plugin to inline links to stylesheets.",
   "main": "dist/index.js",

@@ -1,5 +1,5 @@
 {
-    "name": "@enjikaka/gulp-inline-style",
+    "name": "@enjikaka/gulp-inline-styles",
     "version": "0.0.1",
     "license": "MIT",
     "exports": "./src/index.ts"
